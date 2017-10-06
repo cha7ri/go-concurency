@@ -7,7 +7,7 @@ Tarik Ghallab, Schibsted Morocco
 
 #HSLIDE
 
-## Why do we need parallelism?
+## Why do we need Concurency?
 
 #HSLIDE
 
