@@ -84,6 +84,7 @@ package main
 ~~~
 
 #HSLIDE
+- When the main function exists the Goroutine will be killed let's for it: 
 ~~~
 package main
   import (
