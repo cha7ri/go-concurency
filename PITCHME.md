@@ -39,6 +39,7 @@ And why do we need many threads?
   Let's start with a boring example to understand better:
   
 #HSLIDE
+
 ~~~
 package main
   import (
