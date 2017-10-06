@@ -27,7 +27,7 @@ Tarik Ghallab, Schibsted Morocco
 ### Go tools to structure the concurency
 Lets understand a process first:
   - A simple definition is: a process is an instance of the a program in memory.
-  - A process can have sub process which we call fork
+  - A process can have sub process which we call child.
   - In each process we have one or many threads and they can **share the memory**
 And why do we need many threads?
 
@@ -38,7 +38,7 @@ And why do we need many threads?
 - Go routines
   Let's start with a boring example to understand better:
   
-  #HSLIDE
+#HSLIDE
 ~~~
 package main
   import (
