@@ -115,7 +115,7 @@ package main
 
 
 #HSLIDE
-##Channels
+## Channels
 ~~~
 package main
   import (
@@ -147,7 +147,8 @@ package main
 - Channels are used for comunication and synchronization.
 
 #HSLIDE
-##Select
+## Select
+
 The select statement provides another way to handle multiple channels. 
 It's like a switch, but each case is a communication: 
 - All channels are evaluated. 
@@ -186,6 +187,8 @@ package main
 	time.Sleep(time.Duration(rand.Intn(1e3)) * time.Millisecond)		
   }
 ~~~
+#HSLIDE
+
 ## Thank you
 
 Questions?
