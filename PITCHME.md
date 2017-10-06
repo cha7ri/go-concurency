@@ -11,7 +11,7 @@ Tarik Ghallab, Schibsted Morocco
 
 #HSLIDE
 
-- CPU can ran only instruction at given moment.
+- CPU can ran only one instruction at given moment.
 - I/O operations takes time to complite (HDD and NET)
 - The time unit very is valuable than gold!
 
@@ -37,6 +37,8 @@ And why do we need many threads?
 #### Concurency in Golang
 - Go routines
   Let's start with a boring example to understand better:
+  
+  #HSLIDE
 ~~~
 package main
   import (
@@ -59,6 +61,8 @@ package main
 
 #### Run on the background
 - Now the same function but it will not block the caller so the main function can continue
+
+#HSLIDE
 ~~~
 package main
   import (
