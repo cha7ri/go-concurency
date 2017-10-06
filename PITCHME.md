@@ -24,7 +24,7 @@ Tarik Ghallab, Schibsted Morocco
 
 #HSLIDE
 
-### Go tools to structure the concurency
+### Some definitions
 Lets understand a process first:
   - A simple definition is: a process is an instance of the a program in memory.
   - A process can have sub process which we call child.
@@ -33,7 +33,6 @@ And why do we need many threads?
 
 #HSLIDE
 
-### Now
 #### Concurency in Golang
 - Go routines
   Let's start with a boring example to understand better:
