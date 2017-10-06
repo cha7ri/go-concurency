@@ -110,9 +110,9 @@ package main
 ## So what is a Goroutine
 - It's an independently executing function, launched by a go statement.
 - It Has its own stack, that can be allocated dynamically.
-- The Golang runtime knows the few registers that should save when it sechedule a Goroutine, saw it's very sheap.
-- We can launch thousdans of Goroutines 
-- Goroutines are multiplexed on threads, so we can have only one thread running many goroutines
+- The Golang runtime knows the few registers that should save when it sechedule a Goroutine, so it's very sheap.
+- We can launch thousdans of Goroutines.
+- Goroutines are multiplexed on threads, so we can have only one thread running many goroutines.
 
 
 #HSLIDE
@@ -188,6 +188,48 @@ package main
 	time.Sleep(time.Duration(rand.Intn(1e3)) * time.Millisecond)		
   }
 ~~~
+
+#HSLIDE
+## Sync package
+- This package provides many premitives to manage the access to a shared memory
+- In Golang this not a best practice: Share by communicating and communicate by sharing memory!
+- Let's take the example of Mutexes:
+
+#HSLIDE
+
+~~~
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"sync"
+	"time"
+)
+
+func main() {
+	var total int = 1
+	var mutex = &sync.Mutex{}
+
+	for w := 0; w < 10; w++ {
+		go func() {
+			mutex.Lock()
+			total += 1
+			mutex.Unlock()
+			time.Sleep(time.Duration(rand.Intn(1e3)) * time.Millisecond)
+		}()
+
+		go func() {
+			mutex.Lock()
+			fmt.Println("Total is %d", total)
+			mutex.Unlock()
+			time.Sleep(time.Duration(rand.Intn(1e3)) * time.Millisecond)
+		}()
+	}
+	time.Sleep(time.Second)
+}
+~~~
+
 #HSLIDE
 
 ## Thank you
